@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { BarChart2, Users, Zap, Video, Check, Play, Maximize, Volume2 } from "lucide-react"
-import { Slider } from "@/components/ui/slider"
+import { BarChart2, Users, Zap, Video, Check, Play } from "lucide-react"
+// import { Slider } from "@/components/ui/slider"
 import { CardContent, Card } from "@/components/ui/card"
 
 export function PaginaAnaliticos() {
@@ -157,7 +157,7 @@ function FeatureCard({ icon, title, description }) {
 function AnalyticsLevels() {
   return (
     <section className="mb-16">
-      <h2 className="text-3xl font-bold text-center mb-12">Análises em todos os níveis</h2>
+      {/* <h2 className="text-3xl font-bold text-center mb-12">Análises em todos os níveis</h2>
       <p className="text-xl text-center mb-12">Obtenha insights abrangentes para maximizar seu ROI.</p>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
@@ -174,7 +174,7 @@ function AnalyticsLevels() {
           <h3 className="text-2xl font-bold mb-4">Desempenho por projeto</h3>
           <p className="text-lg mb-4">Entenda como todos os vídeos em seu projeto se saem. Você pode até filtrar por tags para ver métricas de um grupo específico de vídeos.</p>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }
@@ -348,7 +348,7 @@ function ViewsChart() {
                 strokeWidth="1"
                 strokeDasharray="4 4"
               />
-              {['yellow', 'purple', 'blue', 'green'].map((color, j) => {
+              {['yellow', 'purple', 'blue', 'green'].map((color) => {
                 const y = (1 - d[color] / maxValue) * 100 + '%';
                 const prevY = i > 0 ? (1 - data[i - 1][color] / maxValue) * 100 + '%' : y;
                 return (
